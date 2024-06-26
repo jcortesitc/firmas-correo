@@ -8,6 +8,16 @@ function App() {
   // Define la función actualizarDatos
   const actualizarDatos = () => {
     // Lógica para generar firma
+            var nombre = document.getElementById('nombreInput').value;
+            var telefono = document.getElementById('telefonoInput').value;
+            var cargo = document.getElementById('cargoInput').options[document.getElementById('cargoInput').selectedIndex].text;
+
+            document.getElementById('nombre').innerHTML = `<strong>${nombre}</strong>`;
+            document.getElementById('telefono').innerText = telefono;
+            document.getElementById('cargo').innerHTML = `<strong>${cargo}</strong>`;
+
+            document.getElementById('formularioDatos').style.display = 'none';
+            document.querySelector('.firma').classList.remove('oculto');
     console.log('Generar Firma');
   };
 
