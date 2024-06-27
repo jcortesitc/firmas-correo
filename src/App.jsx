@@ -10,10 +10,22 @@ function App() {
   const [cargo, setCargo] = useState('');
   const [mostrarFirma, setMostrarFirma] = useState(false);
 
+  /**
+    * Actualiza los datos y establece el estado para mostrar la firma.
+  */
   const actualizarDatos = () => {
     setMostrarFirma(true);
   };
 
+  /**
+    * Descarga la firma como una imagen PNG.
+    * 
+    * 1. Obtiene el elemento de la firma por su ID.
+    * 2. Define una escala y opciones para el tamaño y calidad de la imagen.
+    * 3. Usa la función toPng para convertir el elemento en una imagen PNG.
+    * 4. Crea un enlace de descarga y simula un clic para descargar la imagen.
+    * 5. Maneja cualquier error que ocurra durante el proceso.
+  */
   const descargarFirma = () => {
     const firmaElement = document.getElementById('firma');
     const scale = 30;
