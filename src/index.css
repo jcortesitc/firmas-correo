@@ -17,9 +17,6 @@ body {
   display: block;
   margin-top: 10px;
 }
-
-
-
 .formulario input[type="text"], .formulario select {
   width: 100%;
   padding: 8px;
